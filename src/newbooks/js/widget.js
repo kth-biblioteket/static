@@ -226,7 +226,7 @@
     var ss = document.createElement("link");
     ss.type = "text/css";
     ss.rel = "stylesheet";
-    ss.href = "/newbooks/css/style.css";
+    ss.href = "../css/style.css";
     document.getElementsByTagName("head")[0].appendChild(ss);
 
     
@@ -273,7 +273,7 @@ function createbooklist() {
 
     request.onload = function () {
         if (request.readyState == XMLHttpRequest.DONE && request.status == 200) {
-            var nocoverurl = "/newbooks/images/book.png";
+            var nocoverurl = "../images/book.png";
             var response = JSON.parse(request.response);
             var booktype = "";
             var nroftitlestoshow;
@@ -370,7 +370,7 @@ function createbookcarousel(type) {
 
     request.onload = function () {
         if (request.readyState == XMLHttpRequest.DONE && request.status == 200) {
-            var nocoverurl = "/newbooks/images/book.png";
+            var nocoverurl = "../images/book.png";
             var response = JSON.parse(request.response);
             var booktype = "";
             var books = [];
@@ -441,7 +441,7 @@ function createbookcarousel(type) {
 
 function carousel_load() {
     jQuery.ajax({
-        url: '/newbooks/js/kthbbookshelf_smartsign.js',
+        url: 'kthbbookshelf.js',
         dataType: 'script',
         cache: true,
         success: function() {
