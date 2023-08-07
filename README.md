@@ -5,7 +5,6 @@ Static files(html,js, css, images etc)
 
 ###
 
-
 #### Dependencies
 nginx
 
