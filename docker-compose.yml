@@ -10,12 +10,13 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - ./.htpasswd:/etc/nginx/.htpasswd
+      - ./porteusconfig_guest.txt:/usr/share/nginx/html/porteus/porteusconfig_guest.txt
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.static.rule=Host(`${DOMAIN_NAME}`)"
       - "traefik.http.routers.static.entrypoints=websecure"
       - "traefik.http.routers.static.tls=true"
-      - "traefik.http.routers.static.tls.certresolver=myresolver"  
+      - "traefik.http.routers.static.tls.certresolver=myresolver"
     networks:
       - "apps-net"
 

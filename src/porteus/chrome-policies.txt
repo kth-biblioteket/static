@@ -1,0 +1,5 @@
+//Chrome
+// Disable tracking of the users' physical location:
+//"DefaultGeolocationSetting": 2,
+"DefaultBrowserSettingEnabled": false,
+"UserFeedbackAllowed": false
